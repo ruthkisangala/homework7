@@ -1,5 +1,5 @@
 # Task 1
-animals = ["dog", "cat", "rabbit", "snake"]
+#animals = ["dog", "cat", "rabbit", "snake"]
 
 # Task 2
 def five_letters():
@@ -7,8 +7,8 @@ def five_letters():
         if len(animal) < 5:
             print(animal)
 
-print("Animals with less than 5 letters are:")
-five_letters()
+#print("Animals with less than 5 letters are:")
+#five_letters()
 
 # Task 3
 def letter_d():
@@ -16,8 +16,8 @@ def letter_d():
         if animal[0] == "d":
             print(animal)
 
-print("\nAnimals starting with the letter \"d\" are:")
-letter_d()
+#print("\nAnimals starting with the letter \"d\" are:")
+#letter_d()
 
 #Task 4
 def detect():
@@ -27,18 +27,20 @@ def detect():
     else:
         print(False)
     
-detect()
+#detect()
 
 #Task 5
 
 def big_list():
-    first_list = ("").join(list(input("Enter the first list: ").split(",")))
-    
+    first_list = (list(input("Enter the first list: ").split(",")))
+    second_list = (list(input("Enter the second list: ").split(",")))
+    combined_list = list(first_list)
+    for animal in second_list:
+        if animal not in first_list:
+            combined_list.append(animal)
 
-    #second_list = list(input("Enter the second list: "))
-    #combined_list = first_list + second_list
     print(first_list)
-    #print(second_list)
-    #print(combined_list)
+    print(second_list)
+    print(combined_list)
 
 big_list()
